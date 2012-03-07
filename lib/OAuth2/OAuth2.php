@@ -869,7 +869,7 @@ class OAuth2 {
    * 
    * @ingroup oauth2_section_3
    */
-  protected function getAuthorizeParams(Request $request = NULL) {
+  public function getAuthorizeParams(Request $request = NULL) {
     $filters = array(
       "client_id" => array("filter" => FILTER_VALIDATE_REGEXP, "options" => array("regexp" => self::CLIENT_ID_REGEXP), "flags" => FILTER_REQUIRE_SCALAR),
       "response_type" => array("flags" => FILTER_REQUIRE_SCALAR),
